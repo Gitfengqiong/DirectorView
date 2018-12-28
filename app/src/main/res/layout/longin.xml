@@ -9,13 +9,14 @@
             android:layout_height="495dp" tools:layout_editor_absoluteY="8dp" tools:layout_editor_absoluteX="8dp"
             tools:ignore="MissingConstraints">
         <Button
-                android:text="cup"
+                android:text="cup1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:id="@+id/button"
                 android:onClick="cup"/>
         <Button
-                android:text="Button"
+                android:text="cup2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/button2"/>
+                android:layout_height="wrap_content" android:id="@+id/button2"
+        android:onClick="cup2"/>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

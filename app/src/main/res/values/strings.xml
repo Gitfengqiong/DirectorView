@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">DirectorView</string>
+
+    <string name="Control_Set_Url">cgi-bin/vgaic.cgi</string>
+    <string name="Control_Det_Url">cgi-bin/tcp_comment</string>
+    <string name="Control_Hda_Url">cgi-bin/hd_all</string>
+    <string name="Control_Reb_Url">cgi-bin/reboot</string>
+
+
 </resources>
