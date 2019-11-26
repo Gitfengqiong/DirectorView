@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout
+        xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+android:id="@+id/draw">
+
+<LinearLayout
+
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/Mview"
+>
+
+
+    <LinearLayout android:layout_width="0dp" android:layout_height="match_parent"
+                  android:layout_weight="21"
+                  android:id="@+id/rightmain"
+                  android:orientation="vertical"
+    >
+
+        <SurfaceView
+                android:id="@+id/dview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:background="@drawable/shap_client"
+                android:onClick="vset"
+        />
+
+
+        <TextView android:layout_width="match_parent" android:layout_height="5dp"
+        android:background="#11ffee"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+                      android:layout_weight="1"
+                      android:orientation="horizontal">
+            <TextView android:layout_width="2dp" android:layout_height="match_parent"
+                      android:background="#11ffee"/>
+            <SurfaceView
+                    android:id="@+id/view1"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:background="@drawable/shap_over"
+                    android:onClick="vset"
+            />
+            <TextView android:layout_width="2dp" android:layout_height="match_parent"
+                      android:background="#11ffee"/>
+            <SurfaceView
+                    android:id="@+id/view2"
+                    android:background="@drawable/shap_over"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:onClick="vset"/>
+            <TextView android:layout_width="2dp" android:layout_height="match_parent"
+                      android:background="#11ffee"/>
+
+            <SurfaceView
+                    android:id="@+id/view3"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:background="@drawable/shap_over"
+                    android:onClick="vset"
+            />
+            <TextView android:layout_width="2dp" android:layout_height="match_parent"
+                      android:background="#11ffee"/>
+
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="2dp"
+                  android:background="#11ffee"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+    <LinearLayout android:layout_width="320dp" android:layout_height="match_parent"
+                  android:layout_gravity="right"
+    android:background="#f1f1f1">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:layout_weight="9"
+                  android:id="@+id/leftmain"
+                  android:background="@drawable/shap_over"
+                  android:orientation="vertical"
+
+    >
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/shap_over"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+                          android:layout_weight="1"
+                          android:orientation="horizontal">
+                <EditText android:id="@+id/ips"
+                          android:layout_weight="6"
+                          android:layout_height="match_parent"
+                          android:layout_width="0dp"
+                          android:digits="0123456789."
+                          android:textAlignment="center"
+                          android:hint="设备IP"/>
+                <Button android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:onClick="setIp"
+                        android:textAlignment="center"
+                        android:text="IP&#10;Set"/>
+
+            </LinearLayout>
+            <!--
+            <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+                          android:layout_weight="1"
+                          android:background="@drawable/shap_over"
+                          android:orientation="horizontal">
+                <EditText android:layout_width="0dp" android:layout_height="match_parent"
+                          android:layout_weight="6"
+                          android:id="@+id/setts1"
+                          android:layout_gravity="center"
+                          android:hint="第一路TS地址:&#10;IP:Port"
+                          android:textAlignment="center"/>
+                <Button android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:onClick="setts_1"
+                        android:textAlignment="center"
+                        android:text="TS1&#10;Set"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+                          android:layout_weight="1"
+                          android:background="@drawable/shap_over"
+                          android:orientation="horizontal">
+                <EditText android:layout_width="0dp" android:layout_height="match_parent"
+                          android:layout_weight="6"
+                          android:id="@+id/setts2"
+                          android:layout_gravity="center"
+                          android:hint="第二路TS地址：&#10;IP:Port"
+                          android:textAlignment="center"/>
+                <Button android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:onClick="setts_2"
+                        android:textAlignment="center"
+                        android:text="TS2&#10;Set"/>
+            </LinearLayout>
+
+-->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+                          android:layout_weight="1"
+                          android:background="@drawable/shap_over"
+                          android:orientation="horizontal">
+                <EditText android:layout_width="0dp" android:layout_height="match_parent"
+                          android:layout_weight="6"
+                          android:id="@+id/setmask"
+                          android:layout_gravity="center"
+                          android:hint="子网掩码"
+                          android:textAlignment="center"/>
+                <Button android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:onClick="setmask"
+                        android:textAlignment="center"
+                        android:text="mask&#10;Set"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+                          android:layout_weight="1"
+                          android:background="@drawable/shap_over"
+                          android:orientation="horizontal">
+                <EditText android:layout_width="0dp" android:layout_height="match_parent"
+                          android:layout_weight="6"
+                          android:id="@+id/setgate"
+                          android:layout_gravity="center"
+                          android:hint="网关"
+                          android:textAlignment="center"/>
+                <Button android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:onClick="setgate"
+                        android:textAlignment="center"
+                        android:text="gate&#10;Set"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+                          android:layout_weight="1"
+                          android:background="@drawable/shap_over"
+                          android:orientation="horizontal">
+                <EditText android:layout_width="0dp" android:layout_height="match_parent"
+                          android:layout_weight="6"
+                          android:id="@+id/settsd"
+                          android:layout_gravity="center"
+                          android:hint="导播TS地址：&#10;IP:Port"
+                          android:textAlignment="center"/>
+                <Button android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:textAlignment="center"
+                        android:text="TSD&#10;Set"
+                        android:onClick="setts_d"/>
+            </LinearLayout>
+
+<!--
+            <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+                          android:layout_weight="1"
+                          android:background="@drawable/shap_over"
+                          android:orientation="horizontal">
+                <EditText android:layout_width="0dp" android:layout_height="match_parent"
+                          android:layout_weight="6"
+                          android:id="@+id/setrt1"
+                          android:layout_gravity="center"
+                          android:hint="第一路RTMP&#10;rtmp://url"
+                          android:textAlignment="center"/>
+                <Button android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:textAlignment="center"
+                        android:text="Rtmp1&#10;Set"
+                        android:onClick="setrt_1"/>
+            </LinearLayout>
+
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+                          android:layout_weight="1"
+                          android:background="@drawable/shap_over"
+                          android:orientation="horizontal">
+                <EditText android:layout_width="0dp" android:layout_height="match_parent"
+                          android:layout_weight="6"
+                          android:id="@+id/setrt2"
+                          android:hint="第二路RTMP&#10;rtmp://url"
+                          android:textAlignment="center"/>
+                <Button android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:textAlignment="center"
+                        android:text="Rtmp2&#10;Set"
+                        android:onClick="setrt_2"/>
+            </LinearLayout>
+            -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+                          android:layout_weight="1"
+                          android:background="@drawable/shap_over"
+                          android:orientation="horizontal">
+                <EditText android:layout_width="0dp" android:layout_height="match_parent"
+                          android:layout_weight="6"
+                          android:id="@+id/setrtd"
+                          android:layout_gravity="center"
+                          android:hint="导播输出RTMP&#10;rtmp://url"
+                          android:textAlignment="center"/>
+                <Button android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:textAlignment="center"
+                        android:text="RtmpD&#10;Set"
+                        android:onClick="setrt_d"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:background="@drawable/shap_over"
+                android:orientation="vertical">
+
+            <TextView android:layout_width="match_parent" android:layout_height="0dp"
+                      android:layout_weight="1"
+                      android:textAlignment="center"
+                      android:text="第一路输入属性"
+                      android:textStyle="bold"
+
+            />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+                          android:layout_weight="2.15"
+                          android:background="@drawable/shap_over"
+                          android:orientation="horizontal">
+
+                <Spinner android:layout_width="0dp" android:layout_height="match_parent"
+                         android:layout_weight="1"
+                android:background="@drawable/shap_over"/>
+                <Spinner android:layout_width="0dp" android:layout_height="match_parent"
+                         android:layout_weight="1"
+                android:background="@drawable/shap_over"/>
+                <Spinner android:layout_width="0dp" android:layout_height="match_parent"
+                         android:layout_weight="1"
+                android:background="@drawable/shap_over"/>
+
+            </LinearLayout>
+
+            <TextView android:layout_width="match_parent" android:layout_height="0dp"
+                      android:layout_weight="1"
+                      android:textAlignment="center"
+                      android:text="第二路输入属性"
+                      android:textStyle="bold"
+
+            />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+                          android:layout_weight="2.15"
+                          android:background="@drawable/shap_over"
+                          android:orientation="horizontal">
+
+                <Spinner android:layout_width="0dp" android:layout_height="match_parent"
+                         android:layout_weight="1"
+                android:background="@drawable/shap_over"/>
+                <Spinner android:layout_width="0dp" android:layout_height="match_parent"
+                         android:layout_weight="1"
+                android:background="@drawable/shap_over"/>
+                <Spinner android:layout_width="0dp" android:layout_height="match_parent"
+                         android:layout_weight="1"
+                android:background="@drawable/shap_over"/>
+
+            </LinearLayout>
+
+            <TextView android:layout_width="match_parent" android:layout_height="0dp"
+                      android:layout_weight="1"
+                      android:textAlignment="center"
+                      android:text="解码属性"
+                      android:textStyle="bold"
+
+            />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+                          android:layout_weight="4"
+                          android:background="@drawable/shap_over"
+                          android:orientation="horizontal">
+
+                <EditText android:layout_width="0dp" android:layout_height="match_parent"
+                          android:layout_weight="6"
+                          android:id="@+id/setrts"
+                          android:layout_gravity="center"
+                          android:hint="输入流地址&#10;rtmp://url、rtsp://url、http:、udp:..."
+                          android:textAlignment="center"/>
+                <Button android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:textAlignment="center"
+                        android:text="InStream&#10;Set"
+                        android:onClick="setin_s"/>
+
+                <EditText android:layout_width="0dp" android:layout_height="match_parent"
+                          android:layout_weight="4"
+                          android:id="@+id/setdly"
+                          android:layout_gravity="center"
+                          android:hint="解码延时&#10;200 ~ 4000"
+                          android:inputType="number"
+                          android:textAlignment="center"/>
+                <Button android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:textAlignment="center"
+                        android:text="RtmpD&#10;Set"
+                        android:onClick="setin_d"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/shap_over"
+                android:orientation="vertical">
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shap_over"
+                    android:orientation="horizontal">
+
+                <Button android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:text="解码&#10;ON"
+                        android:onClick="d_on"
+                        android:background="@drawable/button_shap_all_on"/>
+
+                <Button android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:text="解码&#10;OFF"
+                        android:onClick="d_off"
+                        android:background="@drawable/button_shap_all_on"/>
+
+                <Button android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:text="RTMP&#10;ON"
+                        android:onClick="Rt_on"
+                        android:background="@drawable/button_shap_all_on"/>
+
+                <Button android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:text="RTMP&#10;OFF"
+                        android:onClick="Rt_off"
+                        android:background="@drawable/button_shap_all_on"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shap_over"
+                    android:orientation="horizontal">
+
+                <Button android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:text="TS:UDP"
+                        android:onClick="Ts_udp"
+                        android:background="@drawable/button_shap_all_on"/>
+
+                <Button android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:text="TS:HTTP"
+                        android:onClick="Ts_http"
+                        android:background="@drawable/button_shap_all_on"/>
+
+                <Button android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:text="TS:OFF"
+                        android:onClick="Ts_off"
+                        android:background="@drawable/button_shap_all_on"/>
+
+                <Button android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:text="RTSP&#10;ON"
+                        android:onClick="Rts_on"
+                        android:background="@drawable/button_shap_all_on"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shap_over"
+                    android:orientation="horizontal">
+
+
+                <Button android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:text="RTSP&#10;OFF"
+                        android:onClick="Rts_off"
+                        android:background="@drawable/button_shap_all_on"/>
+
+
+
+
+                <Button android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:text="Other"
+                        android:onClick="other"
+                        android:background="@drawable/button_shap_all_on"/>
+
+
+
+                <Button android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:text="配置生效"
+                    android:onClick="C_handl"
+                    android:background="@drawable/button_shap_all_on"/>
+
+            <Button android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:text="重启设备"
+                    android:onClick="reboot"
+                    android:background="@drawable/button_shap_all_on"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout android:layout_width="320dp" android:layout_height="match_parent"
+                  android:layout_gravity="left"
+                  android:background="#f1f1f1">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical">
+            <TextView android:layout_width="match_parent" android:layout_height="match_parent"
+            android:background="@drawable/spinner_item"
+            android:textAlignment="center"
+            android:id="@+id/Statu"
+            android:text="Hello\n welocme \n to beijng"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>
